@@ -17,12 +17,6 @@ def analyse_and_write_file(file):
     try:
         items = []
 
-        # file = "MED4200.txt"
-        # with open("MED4200.txt", "r") as f:
-        #     read_data = f.read()
-        #     read_data = iter(read_data.split("\n"))
-        # file = "MED4200.txt"
-
         with open(file, "r") as f:
             read_data = f.read()
             read_data = iter(read_data.split("\n"))
@@ -75,7 +69,7 @@ def analyse_and_write_file(file):
 
         # write to csv file - rename with .csv extension
         name, ext = os.path.splitext(file)
-        outfile_name = name + ".cvs"
+        outfile_name = name + ".csv"
 
         with open(outfile_name, 'w') as csvfile:
             itemwriter = csv.writer(csvfile, dialect = 'excel')
